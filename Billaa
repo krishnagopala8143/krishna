@@ -1,1 +1,11 @@
-hi this billa 
+
+resource "aws_instance" "EC2_server" {
+  ami           = "ami-04b4f1a9cf54c11d0"
+  instance_type = "t2.micro"
+  region=us-east-1
+
+  tags = {
+    Name = "ec2_server-terraform"
+
+  }
+}
